@@ -1,0 +1,101 @@
+.reminder-history-page {
+  animation: fadeIn 0.4s ease;
+}
+
+.page-header {
+  margin-bottom: 40px;
+}
+
+.page-header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.page-header p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.history-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.history-day {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  padding: 24px 32px;
+}
+
+.day-header {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Reusing some .reminder-item styles from TaskDetail but making them vertical timeline-ish */
+.reminders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.reminder-history-page .reminder-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+  transition: transform 0.2s;
+}
+
+.reminder-history-page .reminder-item:hover {
+  transform: translateX(4px);
+  background: var(--bg-card-hover);
+}
+
+.reminder-icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  background: var(--bg-card);
+  border-radius: 12px;
+}
+
+.reminder-history-page .reminder-info {
+  flex: 1;
+}
+
+.reminder-history-page .reminder-channel {
+  font-weight: 600;
+  color: #fff;
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+
+.reminder-meta {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.reminder-history-page .reminder-time {
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+  background: rgba(0,0,0,0.2);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+}
+
+@media (max-width: 640px) {
+  .history-day { padding: 16px; }
+  .reminder-history-page .reminder-item { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .reminder-history-page .reminder-time { margin-top: 8px; }
+}
